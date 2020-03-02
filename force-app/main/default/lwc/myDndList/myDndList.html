@@ -1,0 +1,13 @@
+<template>
+  <div
+    class="droppable drop-container"
+    ondragover={handleDragOver}
+    ondrop={handleDrop}
+  >
+    <div class="task-header">{category}</div>
+    <template for:each={tasklist} for:item="task">
+      <c-my-dnd-item key={task.taskid} task={task} onitemdrag={handleItemDrag}>
+      </c-my-dnd-item>
+    </template>
+  </div>
+</template>

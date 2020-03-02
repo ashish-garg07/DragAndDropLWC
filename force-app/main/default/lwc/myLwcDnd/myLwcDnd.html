@@ -1,0 +1,23 @@
+<template>
+  <div class="container-drag">
+    Drag & Drop Sample 1
+  </div>
+  <section class="container">
+    <div class="left">
+      <c-my-dnd-list
+        category="wip"
+        tasklist={leftTasks}
+        onlistitemdrag={handleListItemDrag}
+        onitemdrop={handleItemDrop}
+      ></c-my-dnd-list>
+    </div>
+    <div class="right">
+      <c-my-dnd-list
+        category="complete"
+        tasklist={rightTasks}
+        onlistitemdrag={handleListItemDrag}
+        onitemdrop={handleItemDrop}
+      ></c-my-dnd-list>
+    </div>
+  </section>
+</template>
